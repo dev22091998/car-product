@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.threesixty-frame{
+  width: 100%;
+}
+.swiper-container.choice {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide.choices {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: rgba( 255, 255, 255, 0.25);
+  box-shadow: 1px 4px 7px 0 rgba( 31, 38, 135, 0.37);
+  backdrop-filter: blur( 4.0px);
+  -webkit-backdrop-filter: blur( 4.0px);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition: border-color 2s ease-in-out;
+}
+
+
+.swiper-slide.choices:hover {
+  filter: brightness(60%);
+}
+
+.swiper-slide.choices img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  padding-top: 10px;
+}
+
+
+/* .swiper-slide.choices:hover{
+
+transform: translateY(-3px);
+
+box-shadow: 1px 7px 7px 0 rgba( 31, 38, 135, 0.37 );
+
+}
+.swiper-slide.choices:active{
+
+transform: translateY(0px);
+
+box-shadow: 0px 2px 7px 0 rgba( 31, 38, 135, 0.37 );
+
+} */
+
+.isSelected {
+  transform: translateY(4px);
+  /* border: 1px solid rgba( 31, 38, 135, 0.37 );   */
+  box-shadow: 0px 1px 2px 0 rgba( 31, 38, 135, 0.37) !important;
+  filter: brightness(60%);
+}
+
+.swiper-slide.choices h5 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #4154f1;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide.choices h5 {
+      font-size: 7px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+  .swiper-slide.choices img {
+      padding-top: 5px;
+  }
+}
+
+.left-shadow {
+  box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.4);
+}
+
+.right-shadow {
+  box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+}
+
+#slider {
+  display: flex;
+}
+.sliderImg{
+  width: 20%;
+  height: auto;
+  /* border: 1px solid red; */
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+.sliderImg img{
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="threesixty-wrapper">
+            <div  class="threesixty" 
+                  data-path="../assets/img/tracker_img/tracker/{index}.png" 
+                  data-count="67">
+                <!-- put your preloader here -->
+                <div class="ui-spinner">
+                    <span class="side side-left">
+                        <span class="fill"></span>
+                    </span>
+                    <span class="side side-right">
+                        <span class="fill"></span>
+                    </span>
+                </div>
+                <!-- end preloader -->
+            </div>
+
+            <div  class="threesixty d-none" 
+                  data-path="../assets/img/onix_img/onix/{index}.png" 
+                  data-count="47">
+                <!-- put your preloader here -->
+                <div class="ui-spinner">
+                    <span class="side side-left">
+                        <span class="fill"></span>
+                    </span>
+                    <span class="side side-right">
+                        <span class="fill"></span>
+                    </span>
+                </div>
+                <!-- end preloader -->
+            </div>
+            <div  class="threesixty d-none" 
+                  data-path="../assets/img/cobalt_img/cobalt/{index}.png" 
+                  data-count="49">
+                <!-- put your preloader here -->
+                <div class="ui-spinner">
+                    <span class="side side-left">
+                        <span class="fill"></span>
+                    </span>
+                    <span class="side side-right">
+                        <span class="fill"></span>
+                    </span>
+                </div>
+                <!-- end preloader -->
+            </div>
+            <div  class="threesixty d-none" 
+                  data-path="../assets/img/jentra_img/jentra/{index}.png" 
+                  data-count="49">
+                <!-- put your preloader here -->
+                <div class="ui-spinner">
+                    <span class="side side-left">
+                        <span class="fill"></span>
+                    </span>
+                    <span class="side side-right">
+                        <span class="fill"></span>
+                    </span>
+                </div>
+                <!-- end preloader -->
+            </div>
+
+            <div  class="threesixty d-none" 
+                  data-path="../assets/img/damas_img/damas/{index}.png" 
+                  data-count="49">
+                <!-- put your preloader here -->
+                <div class="ui-spinner">
+                    <span class="side side-left">
+                        <span class="fill"></span>
+                    </span>
+                    <span class="side side-right">
+                        <span class="fill"></span>
+                    </span>
+                </div>
+                <!-- end preloader -->
+            </div>
+
+              <div id="slider">
+                <div class="sliderImg choices" data-path="../assets/img/tracker_img/tracker/{index}.png" >
+                  <img class="thumbnail" src="../assets/img/tracker_img/0.png">
+                </div>
+                <div class="sliderImg choices" data-path="../assets/img/onix_img/onix/{index}.png" >
+                  <img class="thumbnail" src="../assets/img/onix_img/0.png">
+                </div>
+                <div class="sliderImg choices" data-path="../assets/img/jentra_img/jentra/{index}.png" >
+                  <img class="thumbnail" src="../assets/img/jentra_img/0.png">
+                </div>
+                <div class="sliderImg choices" data-path="../assets/img/cobalt_img/cobalt/{index}.png" >
+                  <img class="thumbnail" src="../assets/img/cobalt_img/0.png" >
+                </div>
+                <div class="sliderImg choices" data-path="../assets/img/damas_img/damas/{index}.png" >
+                  <img class="thumbnail" src="../assets/img/damas_img/0.png">
+                </div>
+              </div>
+
+            <!-- Slider cars to change  --> 
+             <div class="swiper-container mySwiper2 choice ">
+              <div class="shadows right-shadow" style="position: absolute; right:0px; width: 5% ; z-index: 2; height: 100%;"></div>
+              <div class="shadows left-shadow" style="position: absolute; width: 5% ; z-index: 2; height: 100%; "></div>
+              <div class="swiper-wrapper">
+
+                  <!-- <div class="swiper-slide choices" data-path="../assets/img/tracker_img/{index}.png" >
+                      <img class="card-img-top" src="../assets/img/tracker_img/0.png">
+                      <div class="car-body">
+                          <h5 class="car-title">Tracker 360° view</h5>
+                      </div>
+
+                  </div>
+
+                  <div class="swiper-slide choices"  data-path="../assets/img/onix_img/{index}.png" >
+                      <img class="card-img-top" src="../assets/img/onix_img/0.png" >
+                      <div class="car-body">
+                          <h5 class="car-title">Onix 360° view</h5>
+                      </div>
+                  </div>
+
+                  <div class="swiper-slide choices" data-path="../assets/img/jentra_img/{index}.png">
+                      <img class="card-img-top" src="../assets/img/jentra_img/0.png">
+                      <div class="car-body">
+                          <h5 class="car-title">Jentra 360° view</h5>
+                      </div>
+                  </div>
+                  <div class="swiper-slide choices" data-path="../assets/img/cobalt_img/{index}.jpg">
+                      <img class="card-img-top" src="../assets/img/cobalt_img/0.jpg">
+                      <div class="car-body">
+                          <h5 class="car-title">Cobalt 360° view</h5>
+                      </div>
+                  </div>
+                  <div class="swiper-slide choices" data-path="../assets/img/damas_img/{index}.png">
+                      <img class="card-img-top" src="../assets/img/damas_img/0.png">
+                      <div class="car-body">
+                          <h5 class="car-title">Damas 360° view</h5>
+                      </div>
+                  </div> -->
+                <!--<div class="swiper-slide choices" data-path="../assets/img/spark_img/{index}.png">
+                      <img class="card-img-top" src="../assets/img/spark_img/0.png">
+                      <div class="car-body">
+                          <h5 class="car-title">Spark 360° view</h5>
+                      </div>
+                  </div>
+                  <div class="swiper-slide choices" data-path="../assets/img/cobalt_img/{index}.jpg">
+                    <img class="card-img-top" src="../assets/img/cobalt_img/0.jpg">
+                    <div class="car-body">
+                        <h5 class="car-title">Cobalt 360° view</h5>
+                    </div>
+                </div>
+
+
+                  <div class="swiper-slide choices" data-path="../assets/img/spark_img/{index}.png">
+                      <img class="card-img-top" src="../assets/img/spark_img/0.png">
+                      <div class="car-body">
+                          <h5 class="car-title">Spark 360° view</h5>
+                      </div>
+                  </div>-->
+
+              </div>
+
+          </div>
+            
+            
+            
+        </div>
+    </div>
+
+
+
+    <script>
+
+        /// 360° view car
+        $(document).ready(function(){
+  
+          var $threeSixty = $('.threesixty');
+  
+          $threeSixty.threeSixty({
+          dragDirection: 'horizontal',
+          useKeys: true,
+          draggable: true
+          });
+        });
+  
+        /// Change main car
+        const mainImgs = document.getElementsByClassName('threesixty')
+        let sliderImgs = document.getElementsByClassName('choices')
+  
+        for (var i=0; i < sliderImgs.length; i++){
+  
+          sliderImgs[i].addEventListener('click', function(){
+                    // console.log(this.getAttribute('data-path')) 
+                    for(let index=0; index<mainImgs.length; index++){
+                        if(mainImgs[index].getAttribute('data-path') !== this.getAttribute('data-path')){
+                            mainImgs[index].classList.add('d-none')
+                    } else {
+                        mainImgs[index].classList.remove('d-none')
+                    }
+                    } 
+          })
+        }
+  
+        
+      ///chouse parts
+      var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      slidesPerGroup: 1,
+      breakpoints: {
+          // when window width is >= 320px
+          320: {
+              slidesPerView: 3,
+              spaceBetween: 10
+          },
+          // when window width is >= 480px
+          576: {
+              slidesPerView: 3,
+              spaceBetween: 10
+          },
+          // when window width is >= 640px
+          768: {
+              slidesPerView: 4,
+              spaceBetween: 10
+          },
+          // when window width is >= 640px
+          992: {
+              slidesPerView: 5,
+              spaceBetween: 10
+          },
+          // when window width is >= 640px
+          1200: {
+              slidesPerView: 6,
+              spaceBetween: 10
+          },
+          // when window width is >= 640px
+          1400: {
+              slidesPerView: 7,
+              spaceBetween: 10
+          }
+      },
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+          el: ".swiper-pagination2",
+          clickable: true,
+      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+          delay: 6000,
+      },
+  });
+  
+  
+  
+  //function for getting car current position
+  function getCarPosition() {
+      var fileLink = img.src;
+  
+      var fileName = fileLink.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
+      carPosition = parseInt(fileName);
+  
+      return carPosition;
+  }
+  //end function
+  
+  
+  // kartalarni toggle va diselect qilish ishladi faqat Jquery
+  $('.swiper-slide.choices').click(function() {
+  
+      if (!$(this).hasClass("isSelected")) {
+  
+          $('.isSelected').removeClass('isSelected');
+          $(this).addClass('isSelected');
+  
+          // rotate(this);
+  
+      } 
+  
+      // console.log("PNG is : "+findCorrectpart());
+  
+  });
+  
+  
+  function onOrientationChange() {
+  
+      var landscape = screen.width > screen.height;
+      var viewportmeta = document.querySelector('meta[name="viewport"]');
+  
+      if (landscape) {
+  
+          viewportmeta.content = "width=device-width, initial-scale=1.0";
+  
+      } else {
+  
+          viewportmeta.content = "width=device-width, initial-scale=0.5";
+  
+      }
+  
+  }
+  
+  window.addEventListener('orientationchange', onOrientationChange);
+  onOrientationChange();
+  
+  
+  
+  function preloadImages(array) {
+      if (!preloadImages.list) {
+          preloadImages.list = [];
+      }
+      var list = preloadImages.list;
+      for (var i = 0; i < array.length; i++) {
+          var img = new Image();
+          img.onload = function() {
+              var index = list.indexOf(this);
+              if (index !== -1) {
+                  // remove image from the array once it's loaded
+                  // for memory consumption reasons
+                  list.splice(index, 1);
+              }
+          }
+          list.push(img);
+          img.src = array[i];
+      }
+  }
+    </script>
+</body>
+</html>

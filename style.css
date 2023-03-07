@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.d-none {
+    display: none;
+}
+.swiper {
+    width: 80%;
+    height: fit-content;
+}
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    /* color: #fff; */
+}
+
+.swiper-container.choice {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .active {
+    /* border: 4px solid #2cfdec; */
+    transform: translateY(4px);
+    /* border: 1px solid rgba( 31, 38, 135, 0.37 );   */
+    box-shadow: 0px 1px 2px 0 rgba( 31, 38, 135, 0.37) !important;
+    filter: brightness(80%);
+    
+  }
+  
+  .swiper-slide.choices {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* border: 1px solid darkorange;
+  border-radius: 20px; */
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 1px 4px 7px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4.0px);
+    -webkit-backdrop-filter: blur( 4.0px);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition: border-color 2s ease-in-out;
+  }
+  
+  
+  .swiper-slide.choices:hover {
+    filter: brightness(60%);
+  }
+  
+  .swiper-slide.choices img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    padding-top: 10px;
+  }
+  
+  
+  /* .swiper-slide.choices:hover{
+  
+  transform: translateY(-3px);
+  
+  box-shadow: 1px 7px 7px 0 rgba( 31, 38, 135, 0.37 );
+  
+  }
+  .swiper-slide.choices:active{
+  
+  transform: translateY(0px);
+  
+  box-shadow: 0px 2px 7px 0 rgba( 31, 38, 135, 0.37 );
+  
+  } */
+  
+  .isSelected {
+    transform: translateY(4px);
+    /* border: 1px solid rgba( 31, 38, 135, 0.37 );   */
+    box-shadow: 0px 1px 2px 0 rgba( 31, 38, 135, 0.37) !important;
+    filter: brightness(60%);
+  }
+  
+  .swiper-slide.choices h5 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0;
+    color: #4154f1;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .swiper-slide.choices h5 {
+        font-size: 7px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .swiper-slide.choices img {
+        padding-top: 5px;
+    }
+  }
+  
+  .left-shadow {
+    box-shadow: inset 7px 0 9px -7px rgba(0, 0, 0, 0.4);
+  }
+  
+  .right-shadow {
+    box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+  }
+  
+  #slider {
+    display: flex;
+  }
+  .sliderImg{
+    width: 20%;
+    height: auto;
+    /* border: 1px solid red; */
+    cursor: pointer;
+    text-align: center;
+    
+  }
+  
+  .sliderImg img{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+.choices {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* border: 1px solid darkorange;
+  border-radius: 20px; */
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 1px 4px 7px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4.0px);
+    -webkit-backdrop-filter: blur( 4.0px);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition: border-color 2s ease-in-out;
+}
+
+
+.mx {
+  display: flex;
+  
+}
+.card-img img{
+  height: 100%;
+}
+
+iframe {
+  height: 200px;
+  width: 100%;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
